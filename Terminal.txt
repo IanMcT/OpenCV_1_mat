@@ -1,0 +1,60 @@
+//Note: mc opens up the midnight commander file manager - easy way to add files and edit them.
+//In there added mat.cpp, the build folder and the CMakeLists.txt file.
+nvidia@tegra-ubuntu:~$ mc .
+
+nvidia@tegra-ubuntu:~$ cd 1-cv-mat
+nvidia@tegra-ubuntu:~/1-cv-mat$ make -C build && ./build/cv_mat
+make: *** build: No such file or directory.  Stop.
+nvidia@tegra-ubuntu:~/1-cv-mat$ mkdir build
+nvidia@tegra-ubuntu:~/1-cv-mat$ make -C build && ./build/cv_mat
+make: Entering directory '/home/nvidia/1-cv-mat/build'
+make: *** No targets specified and no makefile found.  Stop.
+make: Leaving directory '/home/nvidia/1-cv-mat/build'
+nvidia@tegra-ubuntu:~/1-cv-mat$ cd build
+nvidia@tegra-ubuntu:~/1-cv-mat/build$ cmake..
+bash: cmake..: command not found
+nvidia@tegra-ubuntu:~/1-cv-mat/build$ cmake ..
+-- The C compiler identification is GNU 5.4.0
+-- The CXX compiler identification is GNU 5.4.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Looking for pthread_create
+-- Looking for pthread_create - not found
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Found CUDA: /usr/local/cuda-8.0 (found suitable exact version "8.0") 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/nvidia/1-cv-mat/build
+nvidia@tegra-ubuntu:~/1-cv-mat/build$ cd..
+bash: cd..: command not found
+nvidia@tegra-ubuntu:~/1-cv-mat/build$ cd ..
+nvidia@tegra-ubuntu:~/1-cv-mat$ make -C build && ./build/cv_mat
+make: Entering directory '/home/nvidia/1-cv-mat/build'
+make[1]: Entering directory '/home/nvidia/1-cv-mat/build'
+make[2]: Entering directory '/home/nvidia/1-cv-mat/build'
+Scanning dependencies of target cv_mat
+make[2]: Leaving directory '/home/nvidia/1-cv-mat/build'
+make[2]: Entering directory '/home/nvidia/1-cv-mat/build'
+[ 50%] Building CXX object CMakeFiles/cv_mat.dir/mat.cpp.o
+[100%] Linking CXX executable cv_mat
+make[2]: Leaving directory '/home/nvidia/1-cv-mat/build'
+[100%] Built target cv_mat
+make[1]: Leaving directory '/home/nvidia/1-cv-mat/build'
+make: Leaving directory '/home/nvidia/1-cv-mat/build'
+nvidia@tegra-ubuntu:~/1-cv-mat
